@@ -1,11 +1,14 @@
 import { Alert, Button, Textarea } from "flowbite-react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import Comment from "./Comment";
 export default function CommentSection({ postId }) {
   const { currUser } = useSelector((state) => state.user);
   const [comment, setComment] = useState("");
   const [commentsError, setCommentsError] = useState(null);
+  const [comments, setComments] = useState([]);
+  console.log(comments);
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!currUser) return; // Ensure currUser is defined
@@ -24,12 +27,27 @@ export default function CommentSection({ postId }) {
       if (res.ok) {
         setComment("");
         setCommentsError(null);
+        setComments([data, ...comments]);
       }
     } catch (error) {
       setCommentsError(error.message);
     }
   };
 
+  useEffect(() => {
+    const getComments = async () => {
+      try {
+        const res = await fetch(`/api/comment/getPostComments/${postId}`);
+        const data = await res.json();
+        if (res.ok) {
+          setComments(data);
+        }
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
+    getComments();
+  }, [postId]);
   return (
     <div className="max-w-2xl p-3 mx-auto w-full">
       {currUser ? (
@@ -81,6 +99,23 @@ export default function CommentSection({ postId }) {
             </Alert>
           )}
         </form>
+      )}
+      {comments.length === 0 ? (
+        <div>
+          <p className="text-sm my-5">No comments yet!</p>
+        </div>
+      ) : (
+        <>
+          <div className="flex items-center gap-1 my-5 text-sm">
+            <p>Comments:</p>
+            <div className="border py-1 px-2 rounded-sm border-gray-400">
+              <p>{comments.length}</p>
+            </div>
+          </div>
+          {comments.map((comment) => (
+            <Comment key={comment._id} comment={comment} />
+          ))}
+        </>
       )}
     </div>
   );
