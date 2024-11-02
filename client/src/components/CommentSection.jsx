@@ -9,9 +9,10 @@ export default function CommentSection({ postId }) {
   const [commentsError, setCommentsError] = useState(null);
   const [comments, setComments] = useState([]);
   const navigate = useNavigate();
+  console.log(currUser);
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!currUser) return; // Ensure currUser is defined
+    if (!currUser) return;
     if (comment.length > 200) return;
     try {
       const res = await fetch("/api/comment/create", {
@@ -77,6 +78,13 @@ export default function CommentSection({ postId }) {
     }
   };
 
+  const handleEdit = async (comment, editedComment) => {
+    setComments(
+      comments.map((c) =>
+        c._id === comment._id ? { ...c, content: editedComment } : c
+      )
+    );
+  };
   return (
     <div className="max-w-2xl p-3 mx-auto w-full">
       {currUser ? (
@@ -142,7 +150,12 @@ export default function CommentSection({ postId }) {
             </div>
           </div>
           {comments.map((comment) => (
-            <Comment key={comment._id} comment={comment} onLike={handleLike} />
+            <Comment
+              key={comment._id}
+              comment={comment}
+              onLike={handleLike}
+              onEdit={handleEdit}
+            />
           ))}
         </>
       )}
