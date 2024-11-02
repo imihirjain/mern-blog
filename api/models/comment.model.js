@@ -3,23 +3,23 @@ import mongoose from "mongoose";
 const commentSchema = new mongoose.Schema(
   {
     content: {
-      type: "String",
+      type: String,
       required: true,
     },
     postId: {
-      type: "String",
+      type: String,
       required: true,
     },
     userId: {
-      type: "String",
+      type: String,
       required: true,
     },
     likes: {
-      type: "Array",
+      type: Array,
       default: [],
     },
     numberOfLikes: {
-      type: "Number",
+      type: Number,
       default: 0,
     },
   },
