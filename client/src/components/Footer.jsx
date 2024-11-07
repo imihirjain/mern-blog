@@ -1,7 +1,7 @@
 import { Footer } from "flowbite-react";
 import React from "react";
 import { Link } from "react-router-dom";
-import { BsFacebook, BsInstagram, BsGithub } from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsGithub, BsLinkedin } from "react-icons/bs";
 
 export default function FooterComp() {
   return (
@@ -22,7 +22,7 @@ export default function FooterComp() {
             </div>
             <div className="grid grid-cols-2 gap-8 mt-4 sm:grid-cols-3 sm:gap-6">
               <div className="ml-5">
-                <Footer.Title title="About" />
+                <Footer.Title title="About" className="font-bold" />
                 <Footer.LinkGroup col>
                   <Footer.Link
                     href="https://portfolio-mihirjain.vercel.app/"
@@ -36,12 +36,12 @@ export default function FooterComp() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Mihir's Blog
+                    TechTonic's Blog
                   </Footer.Link>
                 </Footer.LinkGroup>
               </div>
               <div className="ml-5">
-                <Footer.Title title="Follow Us" />
+                <Footer.Title title="Follow Us" className="font-bold" />
                 <Footer.LinkGroup col>
                   <Footer.Link
                     href="https://github.com/imihirjain"
@@ -51,19 +51,26 @@ export default function FooterComp() {
                     Github
                   </Footer.Link>
                   <Footer.Link
-                    href="/about"
+                    href="https://www.linkedin.com/in/mihir-jain-583633213"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Mihir's Blog
+                    LinkedIn
+                  </Footer.Link>
+                  <Footer.Link
+                    href="https://www.instagram.com/imihirjain"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Instagram
                   </Footer.Link>
                 </Footer.LinkGroup>
               </div>
               <div className="ml-5">
-                <Footer.Title title="Legal" />
+                <Footer.Title title="Legal" className="font-bold" />
                 <Footer.LinkGroup col>
-                  <Footer.Link href="#">Privacy Policy</Footer.Link>
-                  <Footer.Link href="#">Terms & Conditions</Footer.Link>
+                  <Footer.Link href="/about">Privacy Policy</Footer.Link>
+                  <Footer.Link href="/projects">Terms & Conditions</Footer.Link>
                 </Footer.LinkGroup>
               </div>
             </div>
@@ -73,13 +80,22 @@ export default function FooterComp() {
             <Footer.Copyright
               className="mb-7 ml-5"
               href="#"
-              by="Mihir's Blog"
+              by="TechTonic's Blog"
               year={new Date().getFullYear()}
             />
             <div className="flex gap-6 ml-5 sm:mt-0 mb-7 sm:justify-center ">
-              <Footer.Icon href="#" icon={BsFacebook} />
-              <Footer.Icon href="#" icon={BsInstagram} />
-              <Footer.Icon href="#" icon={BsGithub} />
+              <Footer.Icon
+                href="https://www.linkedin.com/in/mihir-jain-583633213"
+                icon={BsLinkedin}
+              />
+              <Footer.Icon
+                href="https://www.instagram.com/imihirjain"
+                icon={BsInstagram}
+              />
+              <Footer.Icon
+                href="https://github.com/imihirjain"
+                icon={BsGithub}
+              />
             </div>
           </div>
         </div>

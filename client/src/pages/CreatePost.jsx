@@ -101,6 +101,11 @@ export default function CreatePost() {
             <option value="javascript">JavaScript</option>
             <option value="react.js">React.js</option>
             <option value="next.js">Next.js</option>
+            <option value="ai">Artificial Intelligence</option>
+            <option value="mern">MERN</option>
+            <option value="dsa">DSA</option>
+            <option value="java">JAVA</option>
+            <option value="appdev">App Development</option>
           </Select>
         </div>
         <div className="flex gap-4 items-center justify-between border-teal-500 border-dotted border-4 p-3">
@@ -134,7 +139,7 @@ export default function CreatePost() {
           <img
             src={formData.image}
             alt="upload"
-            className="w-72 h-72 object-fit"
+            className="w-full h-72 object-cover"
           />
         )}
         <ReactQuill

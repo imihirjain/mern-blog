@@ -125,6 +125,11 @@ export default function Search() {
               <option value="react.js">React.js</option>
               <option value="next.js">Next.js</option>
               <option value="javascript">JavaScript</option>
+              <option value="ai">Artificial Intelligence</option>
+              <option value="mern">MERN</option>
+              <option value="dsa">DSA</option>
+              <option value="java">JAVA</option>
+              <option value="appdev">App Development</option>
             </Select>
           </div>
           <Button type="submit" gradientDuoTone="redToYellow" outline>

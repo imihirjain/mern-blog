@@ -11,27 +11,30 @@ export default function About() {
           </h1>
           <div className="flex flex-col gap-6 text-gray-500 text-md">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-              amet, tenetur non voluptatem tempore distinctio incidunt voluptate
-              quae libero voluptas reiciendis pariatur, veniam sunt cumque? Quos
-              asperiores rerum aperiam illum dicta ipsa omnis, mollitia
-              architecto atque molestias quaerat? Molestiae quis atque porro
-              repudiandae ab dolorem fugiat neque ipsa praesentium numquam?
+              Welcome to TechTonic – your go-to platform for everything tech!
+              Built with the robust MERN stack, TechTonic is designed to empower
+              tech enthusiasts, developers, and anyone curious about the latest
+              trends, innovations, and insights in the world of technology.
             </p>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias
-              consequatur aut voluptatum accusantium numquam at, illum maxime
-              molestiae praesentium dolorum labore esse unde quo eveniet
-              reiciendis totam odio autem! Nihil omnis blanditiis consequatur ex
-              ipsa inventore iure officia, unde vitae rem. Ab saepe vero
-              doloremque in a. Veniam odio harum, veritatis ut vero iure eaque,
-              cupiditate iste eligendi ea similique!
+              Our mission at TechTonic is to provide a dynamic space where both
+              seasoned professionals and new learners can share, explore, and
+              discuss the most exciting developments in the tech world. Whether
+              you're looking to deepen your understanding of the latest
+              programming languages, keep up with industry trends, or find tips
+              and tricks to improve your skills, TechTonic is here for you.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-              nesciunt qui suscipit blanditiis minus, nam quidem omnis
-              repudiandae a vero quia, vel dicta, minima et optio reprehenderit
-              perspiciatis dolores excepturi.
+              With features tailored for an engaging blogging experience,
+              TechTonic allows users to write and publish their own technical
+              articles, engage with others through comments, and stay updated
+              with the latest posts. We're committed to building a collaborative
+              community that encourages knowledge sharing and continuous
+              learning.
+            </p>
+            <p>
+              Join TechTonic today and be part of a growing community that fuels
+              the passion for technology and innovation!
             </p>
           </div>
         </div>
