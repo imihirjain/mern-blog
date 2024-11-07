@@ -12,10 +12,10 @@ export default function FooterComp() {
             <div className="mt-5">
               <Link
                 to="/"
-                className="self-center whitespace-nowrap text-lg sm:text-xl font-semibold dark:text-white ml-5"
+                className="self-center whitespace-nowrap text-lg sm:text-xl font-bold dark:text-white ml-5"
               >
                 <span className="px-2 py-1 bg-gradient-to-r from-red-200 via-red-400 to-yellow-200 rounded-lg text-white">
-                  Mihir's
+                  TechTonic
                 </span>
                 Blog
               </Link>
