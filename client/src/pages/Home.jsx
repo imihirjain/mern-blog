@@ -17,11 +17,19 @@ export default function Home() {
       <div className="flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto ">
         <h1 className="text-3xl font-bold lg:text-6xl">Welcome to my Blog</h1>
         <p className="text-gray-500 text-xs sm:text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Exercitationem cupiditate consequatur repellendus dolore
-          necessitatibus eum ut ex sed, perspiciatis odio amet fuga veniam, aut
-          totam perferendis iusto architecto ipsum vero eligendi facilis
+          Dive into the world of technology with TechTonic – a place for tech
+          enthusiasts, developers, and innovators. Here, you’ll find in-depth
+          articles, hands-on projects, and the latest insights to fuel your tech
+          journey. Whether you’re a professional or a beginner, TechTonic offers
+          something for everyone.
         </p>
+        <p className="text-gray-500 text-xs sm:text-sm">
+          Explore topics ranging from web development to AI, stay updated with
+          trending technologies, and connect with a community that shares your
+          passion for learning and innovation. Start exploring today and let
+          TechTonic be your guide to mastering the tech of tomorrow!
+        </p>
+
         <Link
           to={"/search"}
           className="text-xs sm:text-sm text-teal-500 font-bold hover:underline"
