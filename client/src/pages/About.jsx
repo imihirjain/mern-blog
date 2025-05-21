@@ -9,7 +9,7 @@ export default function About() {
           <h1 className="text-3xl font-semibold my-7 text-center">
             About TechTonic Blog
           </h1>
-          <div className="flex flex-col gap-6 text-gray-300 text-md">
+          <div className="flex flex-col gap-6 text-black text-md">
             <p>
               Welcome to TechTonic – your go-to platform for everything tech!
               Built with the robust MERN stack, TechTonic is designed to empower

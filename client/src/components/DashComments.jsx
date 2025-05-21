@@ -9,12 +9,9 @@ import {
   TableBody,
   TableCell,
   TableHead,
-  TableHeadCell,
   TableRow,
 } from "flowbite-react";
-import { Link } from "react-router-dom";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
-import { FaCheck, FaTimes } from "react-icons/fa";
 export default function DashUsers() {
   const { currUser } = useSelector((state) => state.user);
   const [comments, setComments] = useState([]);
