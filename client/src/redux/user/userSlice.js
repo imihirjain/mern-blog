@@ -1,4 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { useReducer } from "react";
+import { useSearchParams } from "react-router-dom";
 
 const initialState = {
   currUser: null,
@@ -9,8 +11,7 @@ const initialState = {
 const userSlice = createSlice({
   name: "user",
   initialState,
-  reducers: 
-  {
+  reducers: {
     signInStart: (state) => {
       state.loading = true;
       state.error = null;

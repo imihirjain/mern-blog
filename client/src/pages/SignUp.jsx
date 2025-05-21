@@ -1,6 +1,7 @@
 import { Alert, Button, Label, Spinner, TextInput } from "flowbite-react";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import FooterComp from "../components/Footer";
 import OAuth from "../components/OAuth";
 
 export default function SignUp() {
@@ -43,7 +44,7 @@ export default function SignUp() {
         <div className="flex-1">
           <Link to="/" className="text-4xl font-bold dark:text-white">
             <span className="px-2 py-1 bg-gradient-to-r from-red-200 via-red-400 to-yellow-200 rounded-lg text-white">
-              TechTonic
+              Mihir's
             </span>
             Blog
           </Link>
